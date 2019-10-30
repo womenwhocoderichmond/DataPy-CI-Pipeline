@@ -15,9 +15,11 @@ agent any
 
     stage('test') {
       steps {
+         withPythonEnv('python') {
           python test.py
       }
-
+      }
+      
       post {
         always {
           junit 'test-reports/*.xml'
