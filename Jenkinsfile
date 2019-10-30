@@ -1,5 +1,6 @@
 pipeline {
 agent any
+node {
   stages {
 
   def installed = fileExists 'bin/activate'
