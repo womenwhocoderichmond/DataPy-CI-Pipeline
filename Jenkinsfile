@@ -1,9 +1,8 @@
 pipeline {
 agent any
-node {
   stages {
 
-  def installed = fileExists 'bin/activate'
+
 
 
         stage("Install Python Virtual Enviroment") {
@@ -35,5 +34,4 @@ node {
       }
     }
   }
-}
 }
