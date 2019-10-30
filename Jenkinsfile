@@ -26,26 +26,26 @@ agent any
           python test.py
          '''
       }
+      }
 
       stage('Building deployable artifact') {
         steps {
         sh '''
            '''
         }
-
+        }
         stage('Storing Artifact') {
           steps {
           sh '''
              '''
           }
-
+          }
       post {
         always {
           junit 'test-reports/*.xml'
         }
       }
-    }
-  }
-}
+
+
 }
 }
