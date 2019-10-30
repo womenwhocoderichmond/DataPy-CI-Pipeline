@@ -1,14 +1,32 @@
 pipeline {
 agent any
   stages {
-    stage('build') {
-      steps {
-        pip install -r requirements.txt'
-      }
+
+  def installed = fileExists 'bin/activate'
+
+  if (!installed) {
+        stage("Install Python Virtual Enviroment") {
+            sh 'virtualenv --no-site-packages .'
+        }
     }
+
+    stage ("Install Application Dependencies") {
+        sh '''
+            source bin/activate
+            pip install -r requirements.txt
+            deactivate
+           '''
+    }
+
+
     stage('test') {
       steps {
-        sh 'python test.py'
+      sh '''
+          source bin/activate
+          sh 'python test.py'
+          deactivate
+         '''
+
       }
       post {
         always {
