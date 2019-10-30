@@ -6,7 +6,7 @@ agent any
     stage ("Install Application Dependencies") {
       steps{
         sh '''
-            python ./pip install -r requirements.txt
+            pip install -r requirements.txt
            '''
       }
     }
