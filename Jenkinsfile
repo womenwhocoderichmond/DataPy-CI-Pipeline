@@ -16,7 +16,7 @@ agent any
     stage('test') {
       steps {
       sh '''
-          sh 'python test.py'
+          python test.py
          '''
       }
       post {
