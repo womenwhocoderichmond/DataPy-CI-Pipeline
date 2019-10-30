@@ -3,20 +3,10 @@ agent any
   stages {
 
 
-
-
-        stage('Install Python Virtual Environment') {
-          steps{
-            sh 'virtualenv --no-site-packages .'
-          }
-        }
-
     stage ("Install Application Dependencies") {
       steps{
         sh '''
-            source bin/activate
-            pip install -r requirements.txt
-            deactivate
+            python ./pip install -r requirements.txt
            '''
       }
     }
