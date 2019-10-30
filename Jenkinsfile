@@ -16,9 +16,7 @@ agent any
     stage('test') {
       steps {
       sh '''
-          source bin/activate
           sh 'python test.py'
-          deactivate
          '''
       }
       post {
