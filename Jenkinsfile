@@ -11,14 +11,32 @@ agent any
       }
     }
 
+    stage('Linting') {
+      steps {
+      sh '''
+
+         '''
+      }
 
 
-    stage('test') {
+    stage('Unit Test') {
       steps {
       sh '''
           python test.py
          '''
       }
+
+      stage('Building deployable artifact') {
+        steps {
+        sh '''
+           '''
+        }
+
+        stage('Storing Artifact') {
+          steps {
+          sh '''
+             '''
+          }
 
       post {
         always {
