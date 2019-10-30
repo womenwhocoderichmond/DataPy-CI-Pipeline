@@ -17,6 +17,7 @@ agent any
 
          '''
       }
+      }
 
 
     stage('Unit Test') {
@@ -45,4 +46,6 @@ agent any
       }
     }
   }
+}
+}
 }
