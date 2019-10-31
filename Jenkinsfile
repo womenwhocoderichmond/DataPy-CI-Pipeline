@@ -41,6 +41,7 @@ agent any
                   }
                   steps {
                       sh  '''
+                              echo $BUILD_NUMBER 
                               python setup.py bdist_wheel
                           '''
                   }
