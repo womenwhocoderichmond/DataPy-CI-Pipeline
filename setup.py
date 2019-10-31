@@ -38,10 +38,5 @@ setup(
     #return os.path.join(os.path.dirname(__file__),
     #                    filename)
 
-    build = 0
 
-   if os.path.exists(__path('build.info')):
-     build = open(__path('build.info')).read().strip()
-
-     version= '0.6.{}'.format(build)
     )
