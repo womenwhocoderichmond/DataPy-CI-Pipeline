@@ -39,5 +39,5 @@ setup(
     #                    filename)
 
     url="https://github.com/womenwhocoderichmond/DataPy-CI-Pipeline",
-    packages=setuptools.find_packages()
+    packages=find_packages()
     )
