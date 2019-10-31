@@ -38,5 +38,6 @@ setup(
     #return os.path.join(os.path.dirname(__file__),
     #                    filename)
 
-
+    url="https://github.com/womenwhocoderichmond/DataPy-CI-Pipeline",
+    packages=setuptools.find_packages()
     )
