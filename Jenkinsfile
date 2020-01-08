@@ -6,7 +6,7 @@ agent any
     stage ("Install Application Dependencies") {
       steps{
         sh '''
-            pip install --user -r requirements.txt
+            /usr/local/bin/pip install --user -r requirements.txt
            '''
       }
     }
@@ -41,7 +41,7 @@ agent any
                   }
                   steps {
                       sh  '''
-                              echo $BUILD_NUMBER 
+                              echo $BUILD_NUMBER
                               python setup.py bdist_wheel
                           '''
                   }
