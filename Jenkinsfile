@@ -14,7 +14,7 @@ stage ("Install Application Dependencies") {
 stage('Linting') {
         steps {
                sh '''
-                     pylint simple-rest.py
+                     pylint simple_rest.py
                '''
               }
 }
