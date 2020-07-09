@@ -1,5 +1,5 @@
-from flask import Flask
 """Some Comment"""
+from flask import Flask
 APP = Flask(__name__)
 
 
