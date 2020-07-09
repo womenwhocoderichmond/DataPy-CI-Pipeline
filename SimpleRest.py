@@ -1,30 +1,29 @@
 from flask import Flask
-app = Flask(__name__)
+APP = Flask(__name__)
 
 
-@app.route('/greet')
+@APP.route('/greet')
 def say_hello():
-  return 'Greetings from Flask Server'
+    return 'Greetings from Flask Server'
 
-@app.route('/')
+@APP.route('/')
 def index():
-  return 'Home Page'
+    return 'Home Page'
 
-@app.route('/hello')
+@APP.route('/hello')
 def hello():
-  return 'Hello, greetings from different endpoint'
+    return 'Hello, greetings from different endpoint'
 
 #adding variables
-@app.route('/hello/<username>')
+@APP.route('/hello/<username>')
 def show_user(username):
   #returns the username
-  return 'Welcome: %s' % username
+    return 'Welcome: %s' % username
 
-@app.route('/post/<int:post_id>')
+@APP.route('/post/<int:post_id>')
 def show_post(post_id):
   #returns the post, the post_id should be an int
-  return str(post_id)
+    return str(post_id)
 
 if __name__ == '__main__':
-    app.run(debug=False)
-    
+    APP.run(debug=False)
