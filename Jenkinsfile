@@ -14,7 +14,7 @@ agent any
     stage('Linting') {
       steps {
       sh '''
-        
+        pylint SimpleRest.py
          '''
       }
       }
