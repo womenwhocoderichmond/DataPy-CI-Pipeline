@@ -3,35 +3,35 @@ agent any
   stages {
 
 
-    stage ("Install Application Dependencies") {
-      steps{
-        sh '''
-            /usr/local/bin/pip install --user -r requirements.txt
+stage ("Install Application Dependencies") {
+        steps{
+              sh '''
+                  /usr/local/bin/pip install --user -r requirements.txt
+              '''
+              }
+       }
+
+stage('Linting') {
+        steps {
+               sh '''
+                     pylint simple-rest.py
+               '''
+              }
+}
+
+
+stage('Unit Test') {
+       steps {
+           sh '''
+           python test.py
            '''
-      }
-    }
-
-    stage('Linting') {
-      steps {
-      sh '''
-        pylint SimpleRest.py
-         '''
-      }
-      }
-
-
-    stage('Unit Test') {
-      steps {
-      sh '''
-          python test.py
-         '''
-      }
-      post {
-        always {
-          junit 'test-reports/*.xml'
-        }
-      }
-      }
+       }
+       post {
+           always {
+           junit 'test-reports/*.xml'
+           }
+       }
+}
 
       stage('Build Artifact') {
                   when {
