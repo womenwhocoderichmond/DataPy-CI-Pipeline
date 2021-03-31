@@ -1,11 +1,13 @@
 pipeline {
-agent any
+agent {
+    docker { image 'python:3.9.1' }
+}
 
 stages {
     stage ("Install Application Dependencies") {
             steps{
                 sh '''
-                   /usr/local/bin/pip install --user -r requirements.txt
+                   pip install -r requirements.txt
                    '''
             }
     }
