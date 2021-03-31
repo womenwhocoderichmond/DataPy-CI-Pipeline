@@ -2,6 +2,8 @@
 
 Simple workshop to gain an introduction to the concepts of Continuous Integration with Python.
 
+ 🎥 Recording of the workshop is [here](https://www.youtube.com/watch?v=0pfRRYza2yQ).
+
 ## How to install Jenkins?
 
 ### Using Docker 
