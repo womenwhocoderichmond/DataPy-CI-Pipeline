@@ -2,7 +2,7 @@
 
 Simple workshop to gain an introduction to the concepts of Continuous Integration with Python.
 
- 🎥 Recording of the workshop is [here](https://www.youtube.com/watch?v=0pfRRYza2yQ).
+🎥 Recording of the workshop is [here](https://www.youtube.com/watch?v=0pfRRYza2yQ).
 
 ## How to install Jenkins?
 
@@ -34,3 +34,7 @@ install the following plugins, in the Plugin Manager [http://localhost:8080/plug
 
 1. [Docker](https://plugins.jenkins.io/docker-plugin/)
 2. [Docker Pipeline](https://plugins.jenkins.io/docker-workflow/)
+
+## AWS CLI Installation
+
+Check the [User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) provided by AWS.
